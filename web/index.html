@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#14181d">
+<title>PDF Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+<div id="splash"><div class="logo"></div><div class="splash-t">PDF Editor</div><div class="splash-s" id="splash-s">Loading engine…</div></div>
+<header id="appbar">
+  <div id="title">PDF Editor</div>
+  <button class="ib" id="b-undo" aria-label="Undo"></button>
+  <button class="ib" id="b-redo" aria-label="Redo"></button>
+  <button class="ib" id="b-save" aria-label="Save or share"></button>
+  <button class="ib" id="b-menu" aria-label="Menu"></button>
+</header>
+<div id="searchbar" hidden>
+  <input id="q" type="search" placeholder="Find in document" enterkeyhint="search">
+  <span id="qcount"></span>
+  <button class="ib" id="q-prev"></button><button class="ib" id="q-next"></button><button class="ib" id="q-close"></button>
+</div>
+<main id="scroller"><div id="pages"></div></main>
+<div id="welcome">
+  <div class="card">
+    <div class="logo"></div>
+    <h1>PDF Editor</h1>
+    <p>Edit text, images, shapes and pages.<br>Everything stays on your phone.</p>
+    <button class="btn primary" id="w-open">Open PDF</button>
+    <button class="btn" id="w-new">New blank PDF</button>
+  </div>
+</div>
+<div id="pill" hidden>1 / 1</div>
+<div id="actionbar" hidden></div>
+<nav id="toolbar"></nav>
+<div id="shapepop" hidden></div>
+<div id="toast" hidden></div>
+<div id="scrim" hidden></div>
+<section id="sheet" hidden></section>
+<section id="pagesview" hidden></section>
+<input type="file" id="f-pdf" accept="application/pdf,.pdf" hidden>
+<input type="file" id="f-img" accept="image/*" hidden>
+<input type="file" id="f-font" accept=".ttf,.otf,font/ttf,font/otf" hidden>
+<input type="file" id="f-import" accept="application/pdf,.pdf" hidden>
+<script type="module" src="app.js"></script>
+</body>
+</html>
